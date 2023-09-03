@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+    background: #360369;
+    color: white;
+
+}
+
+#main {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+#main>#heading {
+
+    font-size: 6vw;
+    margin-bottom: 20px;
+}
+
+#main>#fetchData {
+
+    padding: 1vw;
+    width: 30vw;
+    font-size: 2vw;
+    border: none;
+    border-radius: 5vw;
+    cursor: pointer;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #360369;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@media (max-width: 600px) {
+    .loader {
+        width: 40px;
+        height: 40px;
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #360369;
+    }
+}
+
+#new_main {
+    padding: 25px;
+}
+
+.weather-info {
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid white;
+
+}
+
+.weather-info>div {
+
+    margin: 5px;
+    background-color: #360369;
+    padding: 15px;
+}
+
+.weather-info>div:hover {
+
+    scale: 0.9;
+    transition: scale 0.5s ease-out;
+
+}
+
+#location {
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.lat-long {
+
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.lat-long>div {
+
+    background-color: #270846;
+    padding: 10px;
+    margin-right: 10px;
+
+}
+
+@media screen and (max-width:360px) {
+
+    .lat-long {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lat-long>div {
+
+        margin-bottom: 10px;
+    }
+
+}
+
+.weather-info>h1 {
+
+    background-color: #360369;
+    padding: 10px;
+
+}
